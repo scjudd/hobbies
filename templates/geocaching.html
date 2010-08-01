@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Geocaching</title>
+</head>
+<body>
+    <h1>Geocaching</h1>
+    <p>I have found ${cache_list.__len__()} caches!</p>
+    <table>
+        % for cache in cache_list:
+            <tr>
+                <td><a href="${cache.url}">${cache.gc}</a></td>
+                <td>${cache.state}</td>
+                <td>${cache.name}</td>
+            </tr>
+        % endfor
+    </table>
+    <a href="/">Back..</a>
+</body>
+</html>

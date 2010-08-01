@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+    <title>Dailybooth</title>
+</head>
+<body>
+    <h1>Dailybooth</h1>
+    <p>I have uploaded ${image_list.__len__()} images!</p>
+    % for image in image_list:
+        <img src="${image.url}" />
+        <p>${image.blurb}</p>
+    % endfor
+    <a href="/">Back..</a>
+</body>
+</html>
