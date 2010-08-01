@@ -6,7 +6,6 @@ from mako.lookup import TemplateLookup
 from scrapers.DailyboothScraper import DailyboothScraper
 from scrapers.GeocachingScraper import GeocachingScraper
 
-myName = 'Spencer Judd'
 myDB = DailyboothScraper('scjudd')
 myGC = GeocachingScraper('scjudd')
 
@@ -15,8 +14,7 @@ myLookup = TemplateLookup(directories=['.', 'templates'], output_encoding='utf-8
 class HomePage(object):
     def index(self):
         template = myLookup.get_template('index.html')
-        return template.render(name = myName,
-                               image = myDB.get_items()[0])
+        return template.render(image = myDB.get_items()[0])
     index.exposed = True
 
 class DailyboothPage(object):
