@@ -7,7 +7,9 @@
     <p>I have uploaded ${image_list.__len__()} images!</p>
     % for image in image_list:
         <img src="${image.url}" />
-        <p>${image.blurb}</p>
+        % for line in image.blurb:
+            <p>${line}</p>
+        % endfor
     % endfor
     <a href="/">Back..</a>
 </body>
