@@ -6,7 +6,7 @@
     <h1>Dailybooth</h1>
     <p>I have uploaded ${image_list.__len__()} images!</p>
     % for image in image_list:
-        <img src="${image.url}" />
+        <img src="${image.thumb_url}" /><img src="${image.big_url}" />
         % for line in image.blurb:
             <p>${line}</p>
         % endfor
