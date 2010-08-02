@@ -48,3 +48,14 @@
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
 }
+
+ul.geocaches {
+    list-style-image: url('/images/geocache.gif');
+}
+ul.geocaches li {
+    height:25px;
+}
+ul.geocaches li *{
+    position: relative;
+    top: -10px;
+}
