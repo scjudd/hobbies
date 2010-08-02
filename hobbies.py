@@ -14,7 +14,8 @@ myLookup = TemplateLookup(directories=['.', 'templates'], output_encoding='utf-8
 class HomePage(object):
     def index(self):
         template = myLookup.get_template('index.html')
-        return template.render(image_list = myDB.get_items()[:3])
+        return template.render(image_list = myDB.get_items()[:3],
+                               cache_list = myGC.get_items()[:5])
     index.exposed = True
 
 class DailyboothPage(object):
