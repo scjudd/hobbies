@@ -3,7 +3,11 @@
     <title>Spencer Judd</title>
 </head>
 <body>
-    <img src="${image.url}">
+    <div id="photo_stack">
+        % for i, image in enumerate(image_list):
+            <img id="photo${i+1}" src="${image.url}" />
+        % endfor
+    </div>
     <h1>Spencer Judd</h1>
     <h2>Things I Enjoy:</h2>
     <ul>
