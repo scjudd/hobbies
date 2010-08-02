@@ -41,4 +41,4 @@ home.dailybooth =   DailyboothPage()
 home.gc =           GeocachingPage()
 home.geocaching =   GeocachingPage()
 
-cherrypy.quickstart(home)
+cherrypy.quickstart(home, config="dev.conf")
