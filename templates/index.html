@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <head>
     <title>Spencer Judd</title>
+    <link rel="stylesheet" type="text/css" href="/styles/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/design.css" />
 </head>
 <body>
-    <div id="photo_stack">
-        % for i, image in enumerate(image_list):
-            <img id="photo${i+1}" src="${image.url}" />
-        % endfor
+    <div id="left">
+        <div id="photo_stack">
+            % for i, image in enumerate(image_list):
+                <img id="photo${i+1}" src="${image.url}" />
+            % endfor
+        </div>
+        <h1>Spencer Judd</h1>
+        <h2>Things I Enjoy:</h2>
+        <ul>
+            <li><a href="/dailybooth">Dailybooth</a></li>
+            <li><a href="/geocaching">Geocaching</a></li>
+        </ul>
     </div>
-    <h1>Spencer Judd</h1>
-    <h2>Things I Enjoy:</h2>
-    <ul>
-        <li><a href="/dailybooth">Dailybooth</a></li>
-        <li><a href="/geocaching">Geocaching</a></li>
-    </ul>
+    <script type="text/javascript" src="/scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/scripts/photo_stack.js"></script>
 </body>
 </html>
