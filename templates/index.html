@@ -15,7 +15,7 @@
         <h2>Last 5 Geocaches:</h2>
         <ul class="geocaches">
             % for cache in cache_list:
-                <li><a href="${cache.url}">${cache.gc}</a></li>
+                <li><a href="${cache.url}">${cache.gc} - ${cache.name}</a></li>
             % endfor
         </ul>
         <h2>Things I Enjoy:</h2>
